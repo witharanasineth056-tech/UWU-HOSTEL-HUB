@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - UWU Hostel Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../nav.css">
+    <link rel="stylesheet" href="../footer.css">
+</head>
+<body>
+
+    <header class="site-header" id="header">
+    <nav class="navbar container">
+      <div class="nav-brand">
+        
+        <a class="logo" href="../index.html">UWU Hostel Hub</a>
+      </div>
+      
+      <div class="nav-links desktop-only">
+        <a href="../index.html">Home</a>
+        <a href="../find/findpage.html">Find Hostels</a>
+        <a href="../about/about.html">About</a>
+        <a href="../contact/contact.html" class="active">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+    <section class="contact-hero">
+        <span class="badge">Get in Touch</span>
+        <h1>We're Here to Help</h1>
+        <p>Have questions about finding accommodations near Uva Wellassa University? Reach out to our community support team.</p>
+    </section>
+
+    <main class="contact-container">
+        
+        <div class="contact-info-panel">
+            
+            <div class="info-card">
+                <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="info-details">
+                    <h3>Our Location</h3>
+                    <p>Passara Road, Badulla,</p>
+                    <p>Sri Lanka.</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+                <div class="info-details">
+                    <h3>Email Support</h3>
+                    <p>support@uwuhostelhub.com</p>
+                    <p>info@uwuhostelhub.com</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+                <div class="info-details">
+                    <h3>Call Center</h3>
+                    <p>+94 55 123 4567</p>
+                    <p>Mon - Fri, 8:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-card">
+            <h2>Send us a Message</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">University / Personal Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="yourname@domain.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" class="form-control" placeholder="How can we help you?" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" class="form-control" placeholder="Type your message details here..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit Inquiry</button>
+                <div class="success-alert" id="successAlert" role="status" aria-live="polite">Message sent successfully!</div>
+            </form>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+            <!-- Footer -->
+        <div class="footer-wrapper">
+    <footer class="graphy-footer">
+    <div class="footer-main">
+      <!-- Brand column -->
+      <div class="footer-brand">
+        <div class="brand-logo">
+          <span class="logo-icon">🏢</span>
+          <h2>UWU Hostel Hub</h2>
+        </div>
+        <p class="brand-text">The official housing companion for the Uva Wellassa University community. Making student life easier since 2024.</p>
+        <!-- Social Icons (Graphy style minimal icons) -->
+        <div class="social-links">
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="Instagram">📸</a>
+          <a href="#" aria-label="LinkedIn">🔗</a>
+          <a href="#" aria-label="Globe">🌐</a>
+        </div>
+      </div>
+
+      <!-- Links columns -->
+      <div class="footer-links-grid">
+        <div class="links-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../find/findpage.html">Find Hostels</a></li>
+            <li><a href="../about/about.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="links-col">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">UWU Support</a></li>
+            <li><a href="#">Student Council</a></li>
+          </ul>
+        </div>
+
+        <div class="links-col">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><a href="mailto:hello@uwuhostelhub.lk" class="contact-link">hello@uwuhostelhub.lk</a></li>
+            <li><a href="tel:+94551234567" class="contact-link">+94 55 123 4567</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Line -->
+    <div class="footer-bottom">
+      <div class="copyright">
+        &copy; 2024 UWU Hostel Hub. All rights reserved.
+      </div>
+      <div class="bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookies Settings</a>
+      </div>
+    </div>
+    </footer>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const form = document.querySelector(".form-card form");
+            const alertBox = document.getElementById("successAlert");
+
+            if (!form || !alertBox) return;
+            alertBox.classList.remove("visible");
+
+            form.addEventListener("submit", (event) => {
+                event.preventDefault();
+                alertBox.classList.add("visible");
+                alertBox.textContent = "Message sent successfully!";
+                form.reset();
+                setTimeout(() => {
+                    alertBox.classList.remove("visible");
+                }, 3500);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Find Hostels | UWU Hostel Hub</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../nav.css"/> 
+    <link rel="stylesheet" href="../footer.css"> 
+</head>
+<body>
+    
+    <header class="site-header" id="header">
+    <nav class="navbar container">
+      <div class="nav-brand">
+        
+        <a class="logo" href="../index.html">UWU Hostel Hub</a>
+      </div>
+      
+      <div class="nav-links desktop-only">
+        <a href="../index.html">Home</a>
+        <a href="../find/findpage.html" class="active">Find Hostels</a>
+        <a href="../about/about.html">About</a>
+        <a href="../contact/contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+    <main class="container main-content">
+        <div class="layout-wrapper">
+            
+            <aside class="sidebar">
+                <div class="filter-panel">
+                    <div class="filter-header">
+                        <h3>Filters</h3>
+                        <div class="divider"></div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Gender</label>
+                        <div class="chip-grid">
+                            <button class="filter-chip">Boys</button>
+                            <button class="filter-chip">Girls</button>
+                            <button class="filter-chip active">All</button>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="filter-group">
+                        <div class="filter-row">
+                            <label class="filter-label">Distance (km)</label>
+                            <span class="val-text" id="dist-val">5.0 km</span>
+                        </div>
+                        <input class="range-slider" max="5.0" min="0.1" oninput="document.getElementById('dist-val').innerText = this.value + ' km'" step="0.1" type="range" value="5.0"/>
+                        <div class="range-labels">
+                            <span>Main Gate</span>
+                            <span>5km</span>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label class="filter-label">Amenities</label>
+                        <div class="checkbox-grid">
+                            <label class="checkbox-label">
+                                <input type="checkbox"/>
+                                <span>Free Wifi</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox"/>
+                                <span>Study Room</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox"/>
+                                <span>Inside</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox"/>
+                                <span>24/7 Security</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-secondary w-full">Clear All Filters</button>
+                </div>
+            </aside>
+
+            <section class="results-section">
+                <div class="results-header">
+                    <div>
+                        <h1>Found 8 hostels near UWU</h1>
+                        <p class="subtitle">Discover safe and affordable housing curated for students.</p>
+                    </div>
+                </div>
+                
+                <div class="hostel-grid">
+                    
+                    <div class="hostel-card">
+                        <div class="hostel-card" data-gender="Boys" data-distance="0.0" data-wifi="true" data-security="true" data-study="true" data-inside="true">
+                        <div class="card-image-wrapper">
+                            <img src="../image/corel.jpg" alt="Hostel Room"/>
+                            <div class="badge badge-dark bottom-right">
+                                <span class="material-symbols-outlined icon-sm">distance</span> Inside Campus
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header-row">
+                                <div>
+                                    <h4 class="card-title">Corel Beauty Boys Hostel</h4>
+                                    <p class="card-location">
+                                        <span class="material-symbols-outlined icon-sm">location_on</span> Inside UWU Campus
+                                    </p>
+                                </div>
+                                <div class="card-price-info">
+                                    <p class="price">Rs. 2,500</p>
+                                    <p class="price-period">/ 6month</p>
+                                </div>
+                            </div>
+                            <div class="card-features">
+                                <div class="feature-item" title="WiFi Available">
+                                    <span class="material-symbols-outlined">wifi</span>
+                                    <span>WiFi</span>
+                                </div>
+                                <div class="feature-item" title="24/7 Security">
+                                    <span class="material-symbols-outlined">security</span>
+                                    <span>Secure</span>
+                                </div>
+                                <div class="feature-item" title="Boys Only">
+                                    <span class="material-symbols-outlined">person</span>
+                                    <span>Boys</span>
+                                </div>
+                            </div>
+                            <a href="../details/details.html" class="btn btn-primary w-full">View Details</a>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class="hostel-card">
+                        <div class="hostel-card" data-gender="Girls" data-distance="0.0" data-wifi="true" data-security="true" data-study="true" data-inside="true">
+                        <div class="card-image-wrapper">
+                            <img src="../image/cattleya.jpg" alt="Girls Villa"/>
+                            <div class="badge badge-dark bottom-right">
+                                <span class="material-symbols-outlined icon-sm">distance</span> Inside Campus
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header-row">
+                                <div>
+                                    <h4 class="card-title">Cattleya Girls Hostel</h4>
+                                    <p class="card-location">
+                                        <span class="material-symbols-outlined icon-sm">location_on</span> Inside UWU Campus
+                                    </p>
+                                </div>
+                                <div class="card-price-info">
+                                    <p class="price">Rs. 2,500</p>
+                                    <p class="price-period">/ 6 months</p>
+                                </div>
+                            </div>
+                            <div class="card-features">
+                                <div class="feature-item" title="WiFi Available">
+                                    <span class="material-symbols-outlined">wifi</span>
+                                    <span>WiFi</span>
+                                </div>
+                                <div class="feature-item" title="24/7 Security">
+                                    <span class="material-symbols-outlined">security</span>
+                                    <span>Secure</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="material-symbols-outlined">female</span>
+                                    <span>Girls</span>
+                                </div>
+                            </div>
+                            <a href="..\details\details.html" class="btn btn-primary w-full">View Details</a>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class="hostel-card">
+                        <div class="hostel-card" data-gender="Boys" data-distance="0.0" data-wifi="true" data-security="true" data-study="true" data-inside="true">
+                        <div class="card-image-wrapper">
+                            <img src="../image/Silver-tips-01.jpg" alt="The Gatehouse"/>
+                            <div class="badge badge-dark bottom-right">
+                                <span class="material-symbols-outlined icon-sm">distance</span> Inside Campus
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header-row">
+                                <div>
+                                    <h4 class="card-title">Silver Tips Boys Hostel</h4>
+                                    <p class="card-location">
+                                        <span class="material-symbols-outlined icon-sm">location_on</span> Inside UWU Campus
+                                    </p>
+                                </div>
+                                <div class="card-price-info">
+                                    <p class="price">Rs. 2,500</p>
+                                    <p class="price-period">/ 6month</p>
+                                </div>
+                            </div>
+                            <div class="card-features">
+                                <div class="feature-item" title="WiFi Available">
+                                    <span class="material-symbols-outlined">wifi</span>
+                                    <span>WiFi</span>
+                                </div>
+                                <div class="feature-item" title="24/7 Security">
+                                    <span class="material-symbols-outlined">security</span>
+                                    <span>Secure</span>
+                                </div>
+                                <div class="feature-item" title="Boys Only">
+                                    <span class="material-symbols-outlined">person</span>
+                                    <span>Boys</span>
+                                </div>
+                            </div>
+                            <a href="..\details\details.html" class="btn btn-primary w-full">View Details</a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="hostel-card">
+                        <div class="hostel-card" data-gender="Girls" data-distance="0.0" data-wifi="true" data-security="true" data-study="true" data-inside="true">
+                        <div class="card-image-wrapper">
+                            <img src="../image/bluesapphire.jpg" alt="Blue Sapphire Girl Hostel"/>
+                            <div class="badge badge-dark bottom-right">
+                                <span class="material-symbols-outlined icon-sm">distance</span> Inside Campus
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header-row">
+                                <div>
+                                    <h4 class="card-title">Blue Sapphire Girls Hostel</h4>
+                                    <p class="card-location">
+                                        <span class="material-symbols-outlined icon-sm">location_on</span> Inside UWU Campus
+                                    </p>
+                                </div>
+                                <div class="card-price-info">
+                                    <p class="price">Rs. 2,500</p>
+                                    <p class="price-period">/ 6month</p>
+                                </div>
+                            </div>
+                            <div class="card-features">
+                                <div class="feature-item" title="WiFi Available">
+                                    <span class="material-symbols-outlined">wifi</span>
+                                    <span>WiFi</span>
+                                </div>
+                                <div class="feature-item" title="24/7 Security">
+                                    <span class="material-symbols-outlined">security</span>
+                                    <span>Secure</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="material-symbols-outlined">female</span>
+                                    <span>Girls</span>
+                                </div>
+                            </div>
+                            <a href="..\details\details.html" class="btn btn-primary w-full">View Details</a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="hostel-card">
+                        <div class="hostel-card" data-gender="Boys" data-distance="2.2" data-wifi="false" data-security="true" data-study="false" data-inside="false">
+                        <div class="card-image-wrapper">
+                            <img src="../image/hindgod.jpeg" alt="Hindagoda E Boy Hostel"/>
+                            <div class="badge badge-dark bottom-right">
+                                <span class="material-symbols-outlined icon-sm">distance</span> Outside Campus
+                            </div>
+                        </div>
+                        
+                        <div class="card-body">
+                            <div class="card-header-row">
+                                <div>
+                                    <h4 class="card-title">Hindagoda E Boys Hostel</h4>
+                                    <p class="card-location">
+                                        <span class="material-symbols-outlined icon-sm">location_on</span> 2.2 km from UWU Campus
+                                    </p>
+                                </div>
+                                <div class="card-price-info">
+                                    <p class="price">Rs. 2,500</p>
+                                    <p class="price-period">/ 6month</p>
+                                </div>
+                            </div>
+                            <div class="card-features">
+                                <div class="feature-item" title="WiFi Available">
+                                    <span class="material-symbols-outlined">store</span>
+                                    <span>Supermarket</span>
+                                </div>
+                                <div class="feature-item" title="24/7 Security">
+                                    <span class="material-symbols-outlined">security</span>
+                                    <span>Secure</span>
+                                </div>
+                                <div class="feature-item" title="Boys Only">
+                                    <span class="material-symbols-outlined">person</span>
+                                    <span>Boys</span>
+                                </div>
+                            </div>
+                            <a href="..\details\details.html" class="btn btn-primary w-full">View Details</a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="hostel-card">
+                        <div class="hostel-card" data-gender="Boys" data-distance="1.9" data-wifi="false" data-security="true" data-study="false" data-inside="false">
+                        <div class="card-image-wrapper">
+                            <img src="../image/udwela.jpeg" alt="Udawela Boys Hostel"/>
+                            <div class="badge badge-dark bottom-right">
+                                <span class="material-symbols-outlined icon-sm">distance</span> Outside Campus
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header-row">
+                                <div>
+                                    <h4 class="card-title">Udawela Boys Hostel</h4>
+                                    <p class="card-location">
+                                        <span class="material-symbols-outlined icon-sm">location_on</span> 1.9 km from UWU Campus
+                                    </p>
+                                </div>
+                                <div class="card-price-info">
+                                    <p class="price">Rs. 2,500</p>
+                                    <p class="price-period">/ 6month</p>
+                                </div>
+                            </div>
+                            <div class="card-features">
+                                <div class="feature-item" title="WiFi Available">
+                                    <span class="material-symbols-outlined">store</span>
+                                    <span>Supermarket</span>
+                                </div>
+                                <div class="feature-item" title="24/7 Security">
+                                    <span class="material-symbols-outlined">security</span>
+                                    <span>Secure</span>
+                                </div>
+                                <div class="feature-item" title="Boys Only">
+                                    <span class="material-symbols-outlined">person</span>
+                                    <span>Boys</span>
+                                </div>
+                            </div>
+                            <a href="..\details\details.html" class="btn btn-primary w-full">View Details</a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="hostel-card">
+                        <div class="hostel-card" data-gender="Girls" data-distance="2.9" data-wifi="false" data-security="true" data-study="false" data-inside="false">
+                        <div class="card-image-wrapper">
+                            <img src="../image/kluglpitiy.jpeg" alt="Blue Sapphire Girl Hostel"/>
+                            <div class="badge badge-dark bottom-right">
+                                <span class="material-symbols-outlined icon-sm">distance</span> Outside Campus
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header-row">
+                                <div>
+                                    <h4 class="card-title">Kalugalpitiya Girl Hostel</h4>
+                                    <p class="card-location">
+                                        <span class="material-symbols-outlined icon-sm">location_on</span> 2.9 km from UWU Campus
+                                    </p>
+                                </div>
+                                <div class="card-price-info">
+                                    <p class="price">Rs. 2,500</p>
+                                    <p class="price-period">/ 6month</p>
+                                </div>
+                            </div>
+                            <div class="card-features">
+                                <div class="feature-item" title="WiFi Available">
+                                    <span class="material-symbols-outlined">wifi</span>
+                                    <span>WiFi</span>
+                                </div>
+                                <div class="feature-item" title="24/7 Security">
+                                    <span class="material-symbols-outlined">security</span>
+                                    <span>Secure</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="material-symbols-outlined">female</span>
+                                    <span>Girls</span>
+                                </div>
+                            </div>
+                            <a href="..\details\details.html" class="btn btn-primary w-full">View Details</a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="hostel-card">
+                        <div class="hostel-card" data-gender="Boys" data-distance="1.1" data-wifi="false" data-security="true" data-study="false" data-inside="false">
+                        <div class="card-image-wrapper">
+                            <img src="../image/walawwa.jpeg" alt="Walawwa Boys Hostel"/>
+                            <div class="badge badge-dark bottom-right">
+                                <span class="material-symbols-outlined icon-sm">distance</span> Outside Campus
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-header-row">
+                                <div>
+                                    <h4 class="card-title">Walawwa Boys Hostel</h4>
+                                    <p class="card-location">
+                                        <span class="material-symbols-outlined icon-sm">location_on</span> 1.1 km from UWU Campus
+                                    </p>
+                                </div>
+                                <div class="card-price-info">
+                                    <p class="price">Rs. 2,500</p>
+                                    <p class="price-period">/ 6month</p>
+                                </div>
+                            </div>
+                            <div class="card-features">
+                                <div class="feature-item" title="WiFi Available">
+                                    <span class="material-symbols-outlined">store</span>
+                                    <span>Supermarket</span>
+                                </div>
+                                <div class="feature-item" title="24/7 Security">
+                                    <span class="material-symbols-outlined">security</span>
+                                    <span>Secure</span>
+                                </div>
+                                <div class="feature-item" title="Boys Only">
+                                    <span class="material-symbols-outlined">person</span>
+                                    <span>Boys</span>
+                                </div>
+                            </div>
+                            <a href="..\details\details.html" class="btn btn-primary w-full">View Details</a>
+                        </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </section>
+        </div>
+    </main>
+    
+        <!-- Footer -->
+        <div class="footer-wrapper">
+    <footer class="graphy-footer">
+    <div class="footer-main">
+      <!-- Brand column -->
+      <div class="footer-brand">
+        <div class="brand-logo">
+          <span class="logo-icon">🏢</span>
+          <h2>UWU Hostel Hub</h2>
+        </div>
+        <p class="brand-text">The official housing companion for the Uva Wellassa University community. Making student life easier since 2024.</p>
+        <!-- Social Icons (Graphy style minimal icons) -->
+        <div class="social-links">
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="Instagram">📸</a>
+          <a href="#" aria-label="LinkedIn">🔗</a>
+          <a href="#" aria-label="Globe">🌐</a>
+        </div>
+      </div>
+
+      <!-- Links columns -->
+      <div class="footer-links-grid">
+        <div class="links-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../find/findpage.html">Find Hostels</a></li>
+            <li><a href="../about/about.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="links-col">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">UWU Support</a></li>
+            <li><a href="#">Student Council</a></li>
+          </ul>
+        </div>
+
+        <div class="links-col">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><a href="mailto:hello@uwuhostelhub.lk" class="contact-link">hello@uwuhostelhub.lk</a></li>
+            <li><a href="tel:+94551234567" class="contact-link">+94 55 123 4567</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom Line -->
+    <div class="footer-bottom">
+      <div class="copyright">
+        &copy; 2024 UWU Hostel Hub. All rights reserved.
+      </div>
+      <div class="bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookies Settings</a>
+      </div>
+    </div>
+    </footer>
+    </div>
+    <script src="../javascript.js"></script>
+</body>
+</html>

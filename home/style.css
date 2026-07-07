@@ -1,0 +1,664 @@
+/* ==========================================================================
+   1. Theme Variables & Base Styles
+   ========================================================================== */
+:root {
+    /* Color Palette derived from initial spec */
+    --primary: #003f87;
+    --primary-fixed: #d7e2ff;
+    --on-primary-fixed: #001a40;
+    --secondary: #ffbb16;
+    --secondary-container: #ffbb16;
+    --on-secondary-container: #0b1c30;
+    --background: #f8f9ff;
+    --surface: #f8f9ff;
+    --surface-container: #eff4ff;
+    --surface-container-low: #eff4ff;
+    --surface-container-lowest: #ffffff;
+    --surface-container-highest: #d3e4fe;
+    --inverse-surface: #213145;
+    --inverse-on-surface: #eaf1ff;
+    --outline: #727784;
+    --outline-variant: rgba(194, 198, 212, 0.3);
+    --text-main: #0b1c30;
+    --text-muted: #424752;
+
+    /* Fonts */
+    --font-display: 'Lexend', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Transitions & Structure */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --max-width: 1280px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+    padding-top: 80px; /* Offset fixed header */
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Material Icons Integration Styling */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+}
+
+/* ==========================================================================
+   2. Shared UI Components (Buttons, Badges, Layout Frameworks)
+   ========================================================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: #ffffff;
+}
+.btn-primary:hover {
+    background-color: #002d62;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-container);
+    color: var(--on-secondary-container);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+.btn-outline:hover {
+    background-color: var(--surface-container-low);
+}
+
+.btn-glass {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.btn-glass:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.btn-lg {
+    padding: 14px 32px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 9999px;
+    background-color: var(--primary-fixed);
+    color: var(--on-primary-fixed);
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Structuring Content Headers */
+.section-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 64px auto;
+}
+.section-header h2 {
+    font-family: var(--font-display);
+    font-size: 32px;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+.section-header p {
+    color: var(--text-muted);
+}
+.section-header.text-light h2 {
+    color: #ffffff;
+}
+
+.section-split-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: var(--max-width);
+    margin: 0 auto 48px auto;
+}
+.section-split-header h2 {
+    font-family: var(--font-display);
+    font-size: 32px;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+.section-split-header p {
+    color: var(--text-muted);
+}
+
+
+/* ==========================================================================
+   4. Hero & Main Interactive Search Section
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    min-height: 819px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 64px 24px;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, var(--background) 0%, rgba(248, 249, 255, 0.8) 60%, transparent 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.hero-text-wrapper {
+    max-width: 650px;
+}
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: 48px;
+    color: var(--primary);
+    line-height: 1.2;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+.hero-title .highlight {
+    color: #cc9510; /* Dynamic accent tweak mimicking initial view design context */
+}
+
+.hero-description {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 48px;
+}
+
+/* ==========================================================================
+   5. Key Platform Strengths Features Layout
+   ========================================================================== */
+.features-section {
+    padding: 64px 24px;
+    background-color: var(--surface-container-low);
+}
+
+.features-grid {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.feature-card {
+    background-color: var(--surface-container-lowest);
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid rgba(194, 198, 212, 0.2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: var(--transition-smooth);
+}
+.feature-card:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+}
+
+.icon-container {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: var(--primary-fixed);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    transition: var(--transition-smooth);
+}
+.feature-card:hover .icon-container {
+    transform: scale(1.1);
+}
+.icon-container .material-symbols-outlined {
+    color: var(--primary);
+    font-size: 30px;
+}
+
+.feature-card h3 {
+    font-family: var(--font-display);
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+.feature-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   6. Hostels Showcase
+   ========================================================================== */
+.hostels-section {
+    padding: 64px 24px;
+}
+
+.view-all-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+.view-all-link:hover {
+    text-decoration: underline;
+}
+.view-all-link .material-symbols-outlined {
+    font-size: 14px;
+}
+
+.hostels-grid {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.hostel-card {
+    background-color: var(--surface-container-lowest);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(194, 198, 212, 0.3);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: var(--transition-smooth);
+}
+.hostel-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+}
+
+.card-media {
+    position: relative;
+    height: 256px;
+    overflow: hidden;
+}
+.card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.hostel-card:hover .card-media img {
+    transform: scale(1.1);
+}
+
+.card-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff;
+}
+.bg-primary-tag { background-color: var(--primary); }
+.bg-new-tag { background-color: #007a5e; } /* Elegant alternate placeholder metric tag context */
+
+.card-price {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(4px);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--primary);
+}
+
+.card-content {
+    padding: 24px;
+}
+.card-content h4 {
+    font-family: var(--font-display);
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.location {
+    font-size: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 16px;
+}
+.location .material-symbols-outlined {
+    color: var(--primary);
+    font-size: 14px;
+}
+
+.amenities {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.amenity {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+.amenity .material-symbols-outlined {
+    font-size: 18px;
+}
+
+/* ==========================================================================
+   7. Chronological Instructional Sequence Process Map
+   ========================================================================== */
+.process-section {
+    padding: 64px 24px;
+    background-color: var(--inverse-surface);
+    color: var(--inverse-on-surface);
+}
+.section-header p {
+    color: var(--inverse-on-surface);
+}
+
+.process-steps {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+}
+
+.step-item {
+    position: relative;
+    text-align: center;
+}
+
+.step-number {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: var(--primary-fixed);
+    color: var(--on-primary-fixed);
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px auto;
+}
+
+
+.step-item h3 {
+    font-family: var(--font-display);
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+.step-item p {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* Custom dashed flow indicator lines between procedural elements */
+.step-line::after {
+    content: '';
+    position: absolute;
+    top: 32px;
+    left: calc(50% + 32px);
+    width: calc(100% - 64px);
+    height: 2px;
+    background: repeating-linear-gradient(to right, transparent, transparent 4px, #acc7ff 4px, #acc7ff 8px);
+    z-index: 1;
+}
+
+/* ==========================================================================
+   8. Testimonials Architecture
+   ========================================================================== */
+.testimonials-section {
+    padding: 64px 24px;
+}
+
+.testimonials-grid {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.testimonial-card {
+    background-color: var(--surface-container);
+    padding: 32px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.quote-icon {
+    position: absolute;
+    top: -16px;
+    left: -8px;
+    font-size: 96px !important;
+    color: var(--primary-fixed);
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.testimonial-text {
+    font-size: 16px;
+    font-style: italic;
+    color: var(--text-main);
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.profile-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--primary);
+}
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info .user-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-main);
+}
+.profile-info .user-meta {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   9. Conversion / Action Area Block
+   ========================================================================== */
+.cta-wrapper {
+    max-width: var(--max-width);
+    margin: 0 auto 64px auto;
+    padding: 0 24px;
+}
+
+.cta-container {
+    background-color: var(--primary);
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 64px 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-shapes .shape {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    pointer-events: none;
+}
+.shape-left {
+    width: 256px;
+    height: 256px;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+.shape-right {
+    width: 384px;
+    height: 384px;
+    bottom: 0;
+    right: 0;
+    transform: translate(33%, 33%);
+}
+
+.cta-title {
+    font-family: var(--font-display);
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.cta-description {
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto 32px auto;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+
+/* ==========================================================================
+   11. Media Queries / Mobile Responsiveness
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .features-grid, .hostels-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .btn-list {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    main { padding-top: 70px; }
+    
+    .nav-links { display: none; }
+    .mobile-menu-btn { display: block; }
+    
+    .hero-section { min-height: auto; padding: 48px 24px; }
+    .hero-overlay { background: rgba(248, 249, 255, 0.9); }
+    .hero-title { font-size: 36px; }
+    
+    .section-split-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+    
+    .features-grid, .hostels-grid, .process-steps, .testimonials-grid, .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .step-line::after { display: none; }
+    
+    .cta-buttons { flex-direction: column; }
+}
