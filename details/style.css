@@ -360,6 +360,18 @@ a {
     }
 }
 
+@media (max-width: 940px) {
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .price-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
+
 @media (max-width: 640px) {
     .header .container {
         flex-direction: column;
@@ -379,5 +391,21 @@ a {
 
     .gallery-grid {
         grid-template-columns: 1fr;
+    }
+
+    .hostel-meta {
+        padding: 24px;
+    }
+
+    .btn-group {
+        gap: 12px;
+    }
+
+    .gallery-grid img {
+        height: 220px;
+    }
+
+    .price-value {
+        font-size: 1.6rem;
     }
 }

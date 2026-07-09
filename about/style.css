@@ -310,4 +310,54 @@ h1, h2, h3, h4, h5, h6 {
   .cta-buttons { flex-direction: row; }
 }
 
+@media (max-width: 1024px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-images {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-card {
+    min-height: auto;
+    padding: 32px;
+  }
+
+  .story-grid {
+    gap: 32px;
+  }
+
+  .story-images .image-column {
+    grid-template-columns: 1fr;
+  }
+
+  .image-column {
+    gap: 16px;
+  }
+
+  .section-header {
+    text-align: left;
+  }
+
+  .cta-card {
+    padding: 32px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+}
+
 

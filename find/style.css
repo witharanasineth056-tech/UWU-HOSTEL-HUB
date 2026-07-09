@@ -168,8 +168,8 @@ ul {
 
 /*Main Layout & Sidebar*/
 .main-content {
-    padding-top: 100px; /* offset for fixed header */
-    margin-top: 32px;
+    padding-top: 120px; /* offset for fixed header */
+    margin-top: 0;
 }
 
 .layout-wrapper {
@@ -514,6 +514,50 @@ ul {
 .load-more-text {
     font-size: 12px;
     color: var(--outline);
+}
+
+@media (max-width: 1024px) {
+    .layout-wrapper {
+        gap: 24px;
+    }
+
+    .filter-panel {
+        position: static;
+        top: auto;
+        width: 100%;
+    }
+
+    .chip-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .checkbox-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .filter-panel {
+        padding: 20px;
+    }
+
+    .results-header {
+        gap: 20px;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .card-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .card-price-info {
+        text-align: left;
+    }
 }
 
 
