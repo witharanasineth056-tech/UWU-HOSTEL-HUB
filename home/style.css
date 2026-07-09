@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. Theme Variables & Base Styles
-   ========================================================================== */
+/*1. Theme Variables & Base Styles*/
 :root {
     /* Color Palette derived from initial spec */
     --primary: #003f87;
@@ -51,7 +49,7 @@ body {
 }
 
 main {
-    padding-top: 80px; /* Offset fixed header */
+    padding-top: 80px;
 }
 
 a {
@@ -71,9 +69,7 @@ img {
     vertical-align: middle;
 }
 
-/* ==========================================================================
-   2. Shared UI Components (Buttons, Badges, Layout Frameworks)
-   ========================================================================== */
+/*2. Shared UI Components (Buttons, Badges, Layout Frameworks)*/
 .btn {
     display: inline-flex;
     align-items: center;
@@ -188,9 +184,7 @@ img {
 }
 
 
-/* ==========================================================================
-   4. Hero & Main Interactive Search Section
-   ========================================================================== */
+/*4. Hero & Main Interactive Search Section*/
 .hero-section {
     position: relative;
     min-height: 819px;
@@ -242,7 +236,7 @@ img {
     letter-spacing: -0.02em;
 }
 .hero-title .highlight {
-    color: #cc9510; /* Dynamic accent tweak mimicking initial view design context */
+    color: #cc9510;
 }
 
 .hero-description {
@@ -251,9 +245,7 @@ img {
     margin-bottom: 48px;
 }
 
-/* ==========================================================================
-   5. Key Platform Strengths Features Layout
-   ========================================================================== */
+/*5. Key Platform Strengths Features Layout*/
 .features-section {
     padding: 64px 24px;
     background-color: var(--surface-container-low);
@@ -309,9 +301,7 @@ img {
     color: var(--text-muted);
 }
 
-/* ==========================================================================
-   6. Hostels Showcase
-   ========================================================================== */
+/*6. Hostels Showcase*/
 .hostels-section {
     padding: 64px 24px;
 }
@@ -378,7 +368,7 @@ img {
     color: #ffffff;
 }
 .bg-primary-tag { background-color: var(--primary); }
-.bg-new-tag { background-color: #007a5e; } /* Elegant alternate placeholder metric tag context */
+.bg-new-tag { background-color: #007a5e; }
 
 .card-price {
     position: absolute;
@@ -431,9 +421,7 @@ img {
     font-size: 18px;
 }
 
-/* ==========================================================================
-   7. Chronological Instructional Sequence Process Map
-   ========================================================================== */
+/*7. Chronological Instructional Sequence Process Map*/
 .process-section {
     padding: 64px 24px;
     background-color: var(--inverse-surface);
@@ -494,9 +482,7 @@ img {
     z-index: 1;
 }
 
-/* ==========================================================================
-   8. Testimonials Architecture
-   ========================================================================== */
+/*8. Testimonials Architecture*/
 .testimonials-section {
     padding: 64px 24px;
 }
@@ -567,9 +553,7 @@ img {
     color: var(--text-muted);
 }
 
-/* ==========================================================================
-   9. Conversion / Action Area Block
-   ========================================================================== */
+/*9. Conversion / Action Area Block*/
 .cta-wrapper {
     max-width: var(--max-width);
     margin: 0 auto 64px auto;
@@ -627,9 +611,7 @@ img {
 }
 
 
-/* ==========================================================================
-   11. Media Queries / Mobile Responsiveness
-   ========================================================================== */
+/*11. Media Queries / Mobile Responsiveness*/
 @media (max-width: 1024px) {
     .features-grid, .hostels-grid {
         grid-template-columns: repeat(2, 1fr);

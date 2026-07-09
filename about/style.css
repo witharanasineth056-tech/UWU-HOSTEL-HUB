@@ -1,48 +1,5 @@
-/* ==========================================================================
-   CSS Variables (Theme Definitions translated from Tailwind Config)
-   ========================================================================== */
-:root {
-  /* Colors */
-  --clr-background: #f8f9ff;
-  --clr-surface: #f8f9ff;
-  --clr-surface-container: #e5eeff;
-  --clr-surface-container-low: #eff4ff;
-  --clr-surface-container-high: #dce9ff;
-  --clr-surface-container-highest: #d3e4fe;
-  
-  --clr-primary: #003f87;
-  --clr-primary-container: #0056b3;
-  --clr-on-primary: #ffffff;
-  
-  --clr-secondary-container: #ffbb16;
-  --clr-on-secondary-container: #6c4d00;
-  
-  --clr-tertiary-container: #005f89;
-  --clr-on-tertiary: #ffffff;
-  
-  --clr-text-main: #0b1c30;
-  --clr-text-muted: #424752;
-  --clr-border: rgba(114, 119, 132, 0.2);
-  
-  /* Fonts */
-  --font-body: 'Inter', sans-serif;
-  --font-heading: 'Lexend', sans-serif;
-  
-  /* Spacing */
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 32px;
-  --space-2xl: 48px;
-  --space-3xl: 64px;
-  
-  --max-width: 1280px;
-}
 
-/* ==========================================================================
-   Base Styles & Reset
-   ========================================================================== */
+/*Base Styles & Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -115,11 +72,9 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-/* ==========================================================================
-   Main Content & Sections
-   ========================================================================== */
+/* Main Content & Sections*/
 .main-content {
-  padding-top: 128px; /* Offset for fixed header */
+  padding-top: 128px;
 }
 
 /* Animations */

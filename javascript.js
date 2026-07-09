@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const clearBtn = document.querySelector(".btn-secondary");
     const grid = document.querySelector(".hostel-grid");
     
-    // Checkboxes පිළිවෙලින් හඳුනා ගැනීම
+  
     const checkboxes = document.querySelectorAll(".checkbox-label input");
     const wifiCheck = checkboxes[0];
     const studyCheck = checkboxes[1];
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const hasInside = innerCard.getAttribute("data-inside") === "true";
             const hasSecurity = innerCard.getAttribute("data-security") === "true";
 
-            // Filters සැසඳීම
+
             const genderMatch = selectedGender === "Mixed" || selectedGender === "All" || cardGender.toLowerCase() === selectedGender.toLowerCase();
             const distanceMatch = (cardDistance <= maxDistance);
             const wifiMatch = (!wifiRequired || hasWifi);
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Events එකතු කිරීම
+
     chips.forEach(chip => {
         chip.addEventListener("click", () => {
             chip.parentElement.querySelectorAll(".filter-chip").forEach(btn => btn.classList.remove("active"));
@@ -158,6 +158,5 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // මුලින්ම Run කිරීම
     filterHostels();
 });
