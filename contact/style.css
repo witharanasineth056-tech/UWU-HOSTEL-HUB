@@ -206,22 +206,46 @@ textarea.form-control {
     visibility: visible;
 }
 
-.success-alert {
-    margin-top: 18px;
-    padding: 14px 18px;
-    border-radius: 12px;
-    border: 1px solid rgba(16, 185, 129, 0.4);
-    background-color: rgba(16, 185, 129, 0.12);
-    color: #065f46;
-    font-weight: 600;
-    opacity: 0;
-    transform: translateY(-8px);
-    visibility: hidden;
-    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+@media (max-width: 1024px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        margin: 24px auto 80px auto;
+        padding: 0 6%;
+    }
+
+    .info-card,
+    .form-card {
+        padding: 24px;
+    }
 }
 
-.success-alert.visible {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
+@media (max-width: 768px) {
+    .contact-hero {
+        padding: 64px 6%;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .contact-container {
+        margin-top: 24px;
+        padding: 0 5%;
+    }
+
+    .contact-info-panel {
+        gap: 16px;
+    }
+
+    .form-card {
+        padding: 28px;
+    }
+
+    .btn-submit {
+        padding: 14px 20px;
+    }
+
+    .icon-box {
+        width: 44px;
+        height: 44px;
+        font-size: 1rem;
+    }
 }

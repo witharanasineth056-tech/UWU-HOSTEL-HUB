@@ -632,7 +632,8 @@ img {
     
     .hero-section { min-height: auto; padding: 48px 24px; }
     .hero-overlay { background: rgba(248, 249, 255, 0.9); }
-    .hero-title { font-size: 36px; }
+    .hero-title { font-size: clamp(28px, 8vw, 36px); }
+    .hero-description { font-size: 16px; margin-bottom: 32px; }
     
     .section-split-header { flex-direction: column; align-items: flex-start; gap: 16px; }
     
@@ -642,5 +643,8 @@ img {
     
     .step-line::after { display: none; }
     
-    .cta-buttons { flex-direction: column; }
+    .cta-container { padding: 48px 24px; }
+    .cta-title { font-size: 28px; }
+    .cta-description { font-size: 16px; }
+    .cta-buttons { flex-direction: column; gap: 12px; }
 }
