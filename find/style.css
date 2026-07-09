@@ -189,7 +189,7 @@ ul {
 
 .filter-panel {
     position: sticky;
-    top: 45px;
+    top: 100px;
     background-color: var(--surface-container-lowest);
     padding: 10px;
     border-radius: 12px;
