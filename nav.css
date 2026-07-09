@@ -132,7 +132,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .navbar {
     align-items: flex-start;
-    padding: 16px 0;
+    padding: 16px 20px;
   }
 
   .nav-links {
