@@ -22,47 +22,6 @@ a {
     padding: 0 24px;
 }
 
-.nav-left,
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-}
-
-.logo {
-    font-size: 1.35rem;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    color: #003f87;
-}
-
-.desktop-nav {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-}
-
-.desktop-nav a {
-    color: #424752;
-    font-size: 0.98rem;
-    font-weight: 600;
-    padding-bottom: 4px;
-    border-bottom: 2px solid transparent;
-    transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-.desktop-nav a.active,
-.desktop-nav a:hover {
-    color: #003f87;
-    border-color: #003f87;
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
 .main-content {
     max-width: 1180px;
     margin: 28px auto 40px;
@@ -265,17 +224,6 @@ a {
     border-color: #cbd5e1;
 }
 
-.detail-icon {
-    width: 38px;
-    height: 38px;
-    display: grid;
-    place-items: center;
-    border-radius: 12px;
-    background: #e2e8f0;
-    color: #0f172a;
-    font-size: 1rem;
-}
-
 .gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -291,18 +239,6 @@ a {
 .gallery-grid img:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.detail-row {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 10px 14px;
-    margin-bottom: 16px;
-    color: #475569;
-}
-
-.detail-row strong {
-    color: #0f172a;
 }
 
 .btn-group {
@@ -352,14 +288,6 @@ a {
     transform: translateY(-2px);
 }
 
-
-
-@media (max-width: 940px) {
-    .detail-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 @media (max-width: 940px) {
     .detail-grid {
         grid-template-columns: 1fr;
@@ -371,19 +299,6 @@ a {
         gap: 16px;
     }
 }
-
-@media (max-width: 640px) {
-    .header .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .desktop-nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 12px;
-    }
 
     .detail-grid {
         gap: 20px;
@@ -408,4 +323,4 @@ a {
     .price-value {
         font-size: 1.6rem;
     }
-}
+
