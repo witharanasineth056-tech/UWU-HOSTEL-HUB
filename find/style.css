@@ -72,61 +72,6 @@ ul {
 }
 .w-full { width: 100%; }
 
-.nav-left, .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-}
-
-.nav-right { gap: 16px; }
-
-.logo {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--primary);
-    letter-spacing: -0.02em;
-}
-
-.desktop-nav {
-    display: none;
-    align-items: center;
-    gap: 24px;
-}
-@media (min-width: 768px) { .desktop-nav { display: flex; } }
-
-.desktop-nav a {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--on-surface-variant);
-    transition: color 0.2s;
-}
-.desktop-nav a:hover { color: var(--primary); }
-.desktop-nav a.active {
-    color: var(--primary);
-    border-bottom: 2px solid var(--primary);
-    padding-bottom: 4px;
-}
-
-.search-bar {
-    display: none;
-    align-items: center;
-    background-color: var(--surface-container-low);
-    padding: 6px 16px;
-    border-radius: 8px;
-    border: 1px solid var(--outline-variant);
-}
-@media (min-width: 1024px) { .search-bar { display: flex; } }
-
-.search-bar input {
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 14px;
-    width: 200px;
-    margin-left: 8px;
-    color: var(--on-surface);
-}
 
 /*Buttons*/
 .btn {
@@ -155,16 +100,6 @@ ul {
     color: var(--primary);
 }
 .btn-secondary:hover { background-color: var(--surface-container-highest); }
-
-.btn-outline {
-    background-color: var(--surface-container-high);
-    color: var(--primary);
-}
-.btn-outline:hover {
-    background-color: var(--primary);
-    color: #fff;
-}
-.btn-rounded { border-radius: 50px; padding: 12px 32px; gap: 8px; }
 
 /*Main Layout & Sidebar*/
 .main-content {
@@ -422,16 +357,6 @@ ul {
     font-size: 12px;
     font-weight: 700;
 }
-.badge-secondary {
-    background-color: var(--secondary-container);
-    color: var(--on-secondary-container);
-    border-radius: 50px;
-}
-.badge-tertiary {
-    background-color: var(--tertiary-container);
-    color: var(--on-tertiary-container);
-    border-radius: 50px;
-}
 .badge-dark {
     background-color: rgba(11, 28, 48, 0.8);
     backdrop-filter: blur(4px);
@@ -499,22 +424,6 @@ ul {
 }
 .feature-item .material-symbols-outlined { font-size: 20px; }
 
-/* Load More */
-.load-more-container {
-    padding-top: 48px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-}
-.load-more-btn:hover .material-symbols-outlined {
-    transform: translateY(2px);
-    transition: transform 0.2s;
-}
-.load-more-text {
-    font-size: 12px;
-    color: var(--outline);
-}
 
 @media (max-width: 1024px) {
     .layout-wrapper {
@@ -559,11 +468,6 @@ ul {
         text-align: left;
     }
 }
-
-
-
-
-
 
 .hidden {
     display: none !important;
