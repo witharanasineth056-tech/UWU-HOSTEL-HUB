@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.3;
 }
 
- Typography Classes 
+ /*Typography Classes*/ 
 .display-text { font-size: clamp(32px, 5vw, 48px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
 .headline-lg { font-size: 32px; }
 .headline-sm { font-size: 20px; line-height: 1.4; }
@@ -40,7 +40,6 @@ h1, h2, h3, h4, h5, h6 {
 .text-muted { color: var(--clr-text-muted); }
 .text-white { color: var(--clr-on-primary); }
 .text-center { text-align: center; }
-.text-sm { font-size: 14px; }
 .mb-md { margin-bottom: var(--space-md); }
 .mb-lg { margin-bottom: var(--space-lg); }
 .opacity-90 { opacity: 1; }
@@ -257,20 +256,19 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .bg-white { background-color: white; border: 1px solid var(--clr-border); }
-.bg-secondary-container { background-color: var(--clr-secondary-container); color: var(--clr-on-secondary-container); }
-.bg-tertiary-container { background-color: var(--clr-tertiary-container); color: white; }
+
 
 .card-hover:hover { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
 .card-hover h4 { transition: color 0.3s ease; }
 .card-hover:hover h4 { color: var(--clr-primary); }
-.card-scale:hover { transform: scale(1.02); }
+
 
 .bento-content { height: 100%; display: flex; }
 .row-layout { flex-direction: column; gap: var(--space-xl); align-items: flex-start; }
 @media (min-width: 768px) {
   .row-layout { flex-direction: row; }
 }
-.col-layout { flex-direction: column; }
+
 
 .icon-box {
   width: 64px; height: 64px;
